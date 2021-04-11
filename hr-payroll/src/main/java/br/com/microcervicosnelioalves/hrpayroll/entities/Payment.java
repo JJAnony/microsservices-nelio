@@ -13,6 +13,12 @@ public class Payment implements Serializable {
     public Payment() {
     }
 
+    public Payment(Worker worker, Integer days) {
+        this.name = worker.getName();
+        this.dailyIncome = worker.getDailyIncome();
+        this.days = days;
+    }
+
     public Payment(String name, Double dailyIncome, Integer days) {
         this.name = name;
         this.dailyIncome = dailyIncome;
