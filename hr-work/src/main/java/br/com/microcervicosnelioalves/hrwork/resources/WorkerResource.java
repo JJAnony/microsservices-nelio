@@ -52,5 +52,4 @@ public class WorkerResource {
         return new ResponseEntity<>(object, HttpStatus.OK);
     }
 
-
 }
