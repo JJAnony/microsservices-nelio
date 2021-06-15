@@ -21,7 +21,7 @@ public class UserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = client.findByEmail(username).getBody();
-        if (user != null) {
+        if (user == null) {
             logger.error("Username not Found: " + username);
             throw new UsernameNotFoundException("Account not Found");
         }
